@@ -12,21 +12,54 @@
         </thead>
     
         <tbody>
-            <% var index=1; for(item in allData){  %> 
+            <% var index=1; for(item in allSubscribeData){  %> 
             <tr>
                  <td><%= index %></td>
-                <td><%= allData[item].account %></td>
-                <td><%= new Date(allData[item].date).getFullYear() %>
+                <td><%= allSubscribeData[item].account %></td>
+                <td><%= new Date(allSubscribeData[item].date).getFullYear() %>
                   年
-                  <%=new Date(allData[item].date).getMonth() + 1 %>
+                  <%=new Date(allSubscribeData[item].date).getMonth() + 1 %>
                   月
-                  <%=new Date(allData[item].date).getDate()%>
+                  <%=new Date(allSubscribeData[item].date).getDate()%>
                   日
-                  <%=new Date(allData[item].date).getHours()%>
+                  <%=new Date(allSubscribeData[item].date).getHours()%>
                   時
-                  <%=new Date(allData[item].date).getMinutes()%>
+                  <%=new Date(allSubscribeData[item].date).getMinutes()%>
                   分
-                  <%=new Date(allData[item].date).getSeconds()%>
+                  <%=new Date(allSubscribeData[item].date).getSeconds()%>
+                  秒
+                </td>
+            </tr>
+            <% index++ } %>
+        </tbody>
+    </table>
+    <br/>
+    <h1>取消帳號</h1>
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>取消帳號</th>
+                <th>取消訂閱時間</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <% var index=1; for(item in alldeletInfo){  %> 
+            <tr>
+                 <td><%= index %></td>
+                <td><%= alldeletInfo[item].account %></td>
+                <td><%= new Date(alldeletInfo[item].date).getFullYear() %>
+                  年
+                  <%=new Date(alldeletInfo[item].date).getMonth() + 1 %>
+                  月
+                  <%=new Date(alldeletInfo[item].date).getDate()%>
+                  日
+                  <%=new Date(alldeletInfo[item].date).getHours()%>
+                  時
+                  <%=new Date(alldeletInfo[item].date).getMinutes()%>
+                  分
+                  <%=new Date(alldeletInfo[item].date).getSeconds()%>
                   秒
                 </td>
             </tr>

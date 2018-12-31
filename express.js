@@ -14,18 +14,29 @@ admin.initializeApp({
 });
 
 var fireData = admin.database();
+
+
+//獲取已有帳號資訊
 var connectTofirebase = fireData.ref("AccountData");
-var allData={};
+var allSubscribeData={};
 var allAccount=[];
 connectTofirebase.on("value", function (snapshot) {
     var data = snapshot.val();
-    allData = data;
-    console.log(allData);
+    allSubscribeData = data;
+    console.log(allSubscribeData);
         for (item in data) {
             allAccount.push(data[item].account);
         }
 
 
+})
+
+//獲取刪除資訊
+var alldeletInfo={};
+var connectTofirebaseDeletInfo = fireData.ref("DeleteInfo");
+connectTofirebaseDeletInfo.on("value", function (snapshot) {
+    var data = snapshot.val();
+    alldeletInfo= data;
 })
 // fireData.ref('AccountData').push()
 
@@ -63,7 +74,8 @@ app.get('/admin', function (req, res) {
     res.render('admin',{
         'css':'admin' ,
         'js':'none',
-        'allData':allData
+        'allSubscribeData':allSubscribeData,
+        'alldeletInfo':alldeletInfo,
     });
 });
 
@@ -107,10 +119,15 @@ app.post('/cancelaccount', function (req, res) {
                     "message":"不存在該帳號"
                 });
             } else {
-                for(var item in allData){
+                for(var item in allSubscribeData){
                         var key=item;
-                        if (allData[item].account == content) {
-                            console.log(key)
+                        if (allSubscribeData[item].account == content) {
+                            var connectTofirebase = fireData.ref("DeleteInfo").push();
+                            connectTofirebase.set({
+                                "account": content,
+                                "date": Date.now()
+                            })
+                            //取消訂閱的要求
                             var del_ref = admin.database().ref("AccountData/"+ key);
                             del_ref.remove().then(function(){
                                 res.send({
