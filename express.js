@@ -125,5 +125,5 @@ app.post('/cancelaccount', function (req, res) {
 
 
 
-var port = process.env.PORT || 3000; //如果前面是flase就會進入3000
-app.listen(1222);
+var port = process.env.PORT || 8080; //如果前面是flase就會進入3000
+app.listen(port);

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
+  "engines":{
+    "node":"6.11.1"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
@@ -16,7 +19,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node express.js"
   },
   "author": "",
   "license": "ISC"
