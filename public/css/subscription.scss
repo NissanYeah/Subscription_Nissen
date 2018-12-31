@@ -1,0 +1,186 @@
+ @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+ * {
+     font-family: 'Noto Sans TC';
+ }
+
+ .container {
+     margin: 0 auto;
+     width: 980px;
+     height: auto;
+     border: 4px solid black;
+     padding-bottom: 30px;
+ }
+
+
+
+ ::placeholder {
+     color: black;
+     opacity: 1;
+     /* Firefox */
+ }
+
+
+ .box {
+     width: 90%;
+     margin: 0 auto;
+     margin-top: 80px;
+     img {}
+     h1 {
+         font-size: 70px;
+         margin-bottom: 10px;
+     }
+
+
+ }
+
+
+
+ .box2 {
+
+     border: 1px solid black;
+     border-top: 10px black solid;
+     padding: 33px;
+     width: 90%;
+     height: 300px;
+     margin: 0 auto;
+     margin-top: 40px;
+     font-weight: bolder;
+
+
+     .orange {
+         color: orange;
+     }
+
+     h1 {
+         font-size: 20px;
+         text-align: center;
+     }
+
+     .outer {
+         margin: 0 auto;
+         margin-top: 20px;
+
+         .box3 {
+             margin: 0px;
+             display: inline-block;
+             width: 30%;
+             height: 200px;
+             // border: 1px solid black;
+             padding: 10px;
+             text-align: center;
+
+             h2 {
+                 margin-top: 10px;
+             }
+
+
+         }
+     }
+
+
+
+
+ }
+
+ .box4 {
+     width: 80%;
+     margin: 0 auto;
+     margin-top: 50px;
+     text-align: center;
+
+     input {
+         border: 5px solid black;
+         width: 50%;
+         height: 60px;
+         border-radius: 20px;
+         padding: 10px;
+         font-size: 40px;
+
+         color: black;
+         outline: none;
+
+         &:hover {
+             background-color: rgb(235, 235, 235);
+         }
+
+     }
+
+     button {
+         border: 3px solid black;
+         padding: 10px;
+         font-size: 28px;
+         margin: 20px;
+         margin-bottom: 20px;
+         position: relative;
+         bottom: 3px;
+         outline: none;
+
+         &:hover {
+             cursor: pointer;
+             background-color: rgb(235, 235, 235);
+         }
+     }
+
+     span {
+         position: relative;
+         left: -110px;
+         top: -10px;
+         width: 50%;
+         display: block;
+         margin: 0 auto;
+         font-weight: bold;
+         font-size: 20px;
+
+         a {
+             color: black;
+
+         }
+     }
+ }
+
+ .box_area {
+     width: 85%;
+     margin: 0 auto;
+
+     .box_area_firstline {
+         border-top: 2px solid black;
+
+     }
+
+     ul li {
+         padding: 10px;
+         list-style-type: none;
+         border-bottom: 2px solid black;
+
+         &:hover {
+             color: #9e1134;
+         }
+
+
+
+
+         .icon {
+             float: right;
+             vertical-align: middle;
+
+             &::before {
+                 content: "+";
+                 font-size: 20px;
+             }
+
+         }
+
+         .transform-active {
+             transform: rotate(45deg)
+         }
+     }
+
+     .hiring-detail {
+         margin: 0px;
+         width: 100%;
+         background-color: #eeeeee;
+         padding: 10px;
+         padding-left: 30px;
+     }
+ }

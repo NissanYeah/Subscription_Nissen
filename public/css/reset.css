@@ -1,0 +1,20 @@
+* {
+    /* 歸零預設 */
+    padding: 0;
+    margin: 0;
+    /* 歸零箱子 */
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* 在 iOS 旋轉手機畫面時鎖定文字不縮放 */
+    -webkit-text-size-adjust: none;
+    /*切版開發才使用*/
+    /* border: 1px solid black; */
+
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,36 @@
+<% layout('layout') %>
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+<div class="container">
+  <h1>訂閱帳號</h1>
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>帳號</th>
+                <th>訂閱時間</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <% for(item in allData){%>
+            <tr>
+                <td><%= allData[item].account %></td>
+                <td><%= new Date(allData[item].date).getFullYear() %>
+                  年
+                  <%=new Date(allData[item].date).getMonth()+1%>
+                  月
+                  <%=new Date(allData[item].date).getDay()%>
+                  日
+                  <%=new Date(allData[item].date).getHours()%>
+                  時
+                  <%=new Date(allData[item].date).getMinutes()%>
+                  分
+                  <%=new Date(allData[item].date).getSeconds()%>
+                  秒
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+
+</div>

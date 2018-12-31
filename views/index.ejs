@@ -1,0 +1,63 @@
+
+<% layout('layout') %>
+
+<div class="container">
+    <div class="box">
+        <img src="/images/訂閱尼桑psd_03.gif" alt="">
+        <h1>訂閱尼桑最私密的學習心得</h1>
+        <h2>有些不成熟的心得，想跟你交流！</h2>
+    </div>
+    <div class="box2">
+        <h1>那些有價值<span class="orange">，</span>但還不想公開的內容</h1>
+        <div class="outer">
+            <div class="box3"><img src="/images/learining.gif" alt="">
+                <h2>
+                    <%= title[0]%>
+                </h2>
+            </div>
+            <div class="box3"><img src="/images/book.gif" alt="">
+                <h2>
+                    <%=title[1]%>
+                </h2>
+            </div>
+            <div class="box3"><img src="/images/article.png" alt="">
+                <h2>
+                    <%=title[2]%>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="box4">
+        <!-- <form action="/" method="POST"> -->
+            <input type="text" placeholder="IG帳號" id="subscriptionAccount" value="">
+            <button id="subscriptionButton" type="submit">訂閱</button>
+        <!-- </form> -->
+        <span>＊定期推送，可以隨時 <a href="./cancel" id="button-nodescribe">取消訂閱</a></span>
+    </div>
+    <div class="box_area">
+        <h1>F&Q</h1>
+        <ul>
+            <li class="hiring-title" class="box_area_firstline">1.為什麼會有這麼奇怪的訂閱系統？<span class="icon"></span></li>
+            <div class="hiring-detail">
+                (1)我一般正式的文章會放到<a href="https://medium.com/nissenyeh">Medium（連結）</a>上面，但那些文章需要花非常多的時間打磨和潤稿。<br />但我自認平時學習和工作的筆記也是有趣的、有價值的，只是它們往往<br />
+                ・不是很嚴謹。像是許多課程速記，只用5-10分鐘就寫完<br />
+                ・不適合公開。像是付費課程詳細筆記、面試和工作心得。<br />
+                ・裡面有我很多奇奇怪怪、自以為是的評論、吐槽<br />
+                <br />
+                我不想把這些未經認真審查的東西放到網路上被所有人看到，因此才想到透過「非正式」的私訊的方式分享給身旁的朋友！<br />希望大家也可以給我一些回饋，交流一下彼此的想法。（也請不要外傳）
+                <br /><br />
+                (2)當作寫網頁的練習Side Project</div>
+            <li class="hiring-title">2.為什麼是用IG推送?<span class="icon"></span></li>
+            <div class="hiring-detail">我開心～（好啦，你也可以直接填你秘密的Mail信箱。）</div>
+            <li class="hiring-title">3.你會一直騷擾我嗎?<span class="icon"></span></span>
+            </li>
+            <div class="hiring-detail">如果覺得我太煩，可以隨時取消訂閱。我就是一個想分享&希望得到一些回饋的怪人。</div>
+            <li class="hiring-title">4.跟你不是很熟，訂閱你的私人筆記是不是怪怪的<span class="icon"></span></li>
+            <div class="hiring-detail">我喜歡各式意見，也想知道各種人的想法。（不過太奇怪的心得我可能會不敢傳給你就是了）</div>
+            <li class="hiring-title">5.回覆心得是義務嗎？<span class="icon"></span></li>
+            <div class="hiring-detail">你可以已讀我。但能收到回饋我會很開心。</div>
+        </ul>
+    </div>
+</div>
+
+
